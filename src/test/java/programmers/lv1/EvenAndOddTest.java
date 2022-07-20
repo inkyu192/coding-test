@@ -15,7 +15,9 @@ class EvenAndOddTest {
         int num = 3;
         String answer = evenAndOdd.solution(num);
 
-        assertThat(answer).isEqualTo("Odd");
+        String expected = "Odd";
+
+        assertThat(answer).isEqualTo(expected);
     }
 
     @Test
@@ -23,7 +25,9 @@ class EvenAndOddTest {
         int num = 4;
         String answer = evenAndOdd.solution(num);
 
-        assertThat(answer).isEqualTo("Even");
+        String expected = "Even";
+
+        assertThat(answer).isEqualTo(expected);
     }
 
     @Test
@@ -31,6 +35,8 @@ class EvenAndOddTest {
         int num = 0;
         String answer = evenAndOdd.solution(num);
 
-        assertThat(answer).isEqualTo("Even");
+        String expected = "Even";
+
+        assertThat(answer).isEqualTo(expected);
     }
 }

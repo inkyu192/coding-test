@@ -12,22 +12,28 @@ class RemoveSmallestNumberTest {
 
     @Test
     void testCase1() {
-        int[] arr = new int[]{4, 3, 2, 1};
+        int[] arr = {4, 3, 2, 1};
 
-        assertThat(removeSmallestNumber.solution(arr)).containsExactly(4, 3, 2);
+        int[] expected = {4, 3, 2};
+
+        assertThat(removeSmallestNumber.solution(arr)).isEqualTo(expected);
     }
 
     @Test
     void testCase2() {
-        int[] arr = new int[]{10};
+        int[] arr = {10};
 
-        assertThat(removeSmallestNumber.solution(arr)).containsExactly(-1);
+        int[] expected = {-1};
+
+        assertThat(removeSmallestNumber.solution(arr)).isEqualTo(expected);
     }
 
     @Test
     void testCase3() {
-        int[] arr = new int[]{4, -10, 3, -15, 2, 1};
+        int[] arr = {4, -10, 3, -15, 2, 1};
 
-        assertThat(removeSmallestNumber.solution(arr)).containsExactly(4, -10, 3, 2, 1);
+        int[] expected = {4, -10, 3, 2, 1};
+
+        assertThat(removeSmallestNumber.solution(arr)).isEqualTo(expected);
     }
 }

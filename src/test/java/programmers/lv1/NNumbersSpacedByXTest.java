@@ -15,7 +15,9 @@ class NNumbersSpacedByXTest {
         int x = 2;
         int n = 5;
 
-        assertThat(nNumbersSpacedByX.solution(x, n)).containsExactly(2, 4, 6, 8, 10);
+        long[] expected = {2, 4, 6, 8, 10};
+
+        assertThat(nNumbersSpacedByX.solution(x, n)).isEqualTo(expected);
     }
 
     @Test
@@ -23,7 +25,9 @@ class NNumbersSpacedByXTest {
         int x = 4;
         int n = 3;
 
-        assertThat(nNumbersSpacedByX.solution(x, n)).containsExactly(4, 8, 12);
+        long[] expected = {4, 8, 12};
+
+        assertThat(nNumbersSpacedByX.solution(x, n)).isEqualTo(expected);
     }
 
     @Test
@@ -31,6 +35,8 @@ class NNumbersSpacedByXTest {
         int x = -4;
         int n = 2;
 
-        assertThat(nNumbersSpacedByX.solution(x, n)).containsExactly(-4, -8);
+        long[] expected = {-4, -8};
+
+        assertThat(nNumbersSpacedByX.solution(x, n)).isEqualTo(expected);
     }
 }

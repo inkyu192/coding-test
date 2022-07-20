@@ -16,7 +16,9 @@ class GCDAndLCMTest {
         int m = 12;
         int[] answer = gcdAndLCM.solution(n, m);
 
-        assertThat(answer).containsExactly(3, 12);
+        int[] expected = {3, 12};
+
+        assertThat(answer).isEqualTo(expected);
     }
 
     @Test
@@ -25,6 +27,8 @@ class GCDAndLCMTest {
         int m = 5;
         int[] answer = gcdAndLCM.solution(n, m);
 
-        assertThat(answer).containsExactly(1, 10);
+        int[] expected = {1, 10};
+
+        assertThat(answer).isEqualTo(expected);
     }
 }

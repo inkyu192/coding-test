@@ -15,7 +15,9 @@ class AverageTest {
         int[] arr = {1, 2, 3, 4};
         double answer = average.solution(arr);
 
-        assertThat(answer).isEqualTo(2.5);
+        double expected = 2.5;
+
+        assertThat(answer).isEqualTo(expected);
     }
 
     @Test
@@ -23,7 +25,9 @@ class AverageTest {
         int[] arr = {5, 5};
         double answer = average.solution(arr);
 
-        assertThat(answer).isEqualTo(5);
+        double expected = 5;
+
+        assertThat(answer).isEqualTo(expected);
     }
 
     @Test
@@ -31,6 +35,8 @@ class AverageTest {
         int[] arr = {-5, -5};
         double answer = average.solution(arr);
 
-        assertThat(answer).isEqualTo(-5);
+        double expected = -5;
+
+        assertThat(answer).isEqualTo(expected);
     }
 }
