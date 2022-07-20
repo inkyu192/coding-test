@@ -5,8 +5,9 @@ public class GCDAndLCM {
     public int[] solution(int n, int m) {
         int gcd = gcd(n, m);
         int lcm = n * m / gcd;
+        int[] answer = {gcd, lcm};
 
-        return new int[]{gcd, lcm};
+        return answer;
     }
 
     private int gcd(int num1, int num2) {
