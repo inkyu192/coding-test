@@ -1,6 +1,6 @@
 package programmers.lv1;
 
-public class HarshadNumber {
+public class HarShadNumber {
 
     public boolean solution(int x) {
         String[] array = String.valueOf(x).split("");
