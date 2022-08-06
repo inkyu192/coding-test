@@ -8,16 +8,14 @@ public class MoreSpicy {
         int answer = 0;
         PriorityQueue<Integer> queue = new PriorityQueue<>();
 
-        for (int i = 0; i < scoville.length; i++) {
-            queue.add(scoville[i]);
+        for (int i : scoville) {
+            queue.add(i);
         }
 
         while (queue.size() > 1 && queue.peek() < K) {
-            Integer FirstNotSpicy = queue.poll();
-            Integer SecondNotSpicy = queue.poll();
-
-            int newSpicy = FirstNotSpicy + (SecondNotSpicy * 2);
-            queue.add(newSpicy);
+            Integer a = queue.poll();
+            Integer b = queue.poll();
+            queue.add(a + (b * 2));
             answer++;
         }
 
