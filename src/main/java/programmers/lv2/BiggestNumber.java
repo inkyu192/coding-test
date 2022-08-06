@@ -6,9 +6,8 @@ import java.util.Collections;
 public class BiggestNumber {
 
     public String solution(int[] numbers) {
-        StringBuilder answer = new StringBuilder();
-
         ArrayList<String> list = new ArrayList<>();
+
         for (int number : numbers) {
             list.add(String.valueOf(number));
         }
@@ -17,8 +16,10 @@ public class BiggestNumber {
 
         if (list.get(0).equals("0")) return "0";
 
-        for (int i = 0; i < list.size(); i++) {
-            answer.append(list.get(i));
+        StringBuilder answer = new StringBuilder();
+
+        for (String s : list) {
+            answer.append(s);
         }
 
         return answer.toString();
