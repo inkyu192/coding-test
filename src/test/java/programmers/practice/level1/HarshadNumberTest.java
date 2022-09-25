@@ -6,35 +6,35 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @DisplayName("하샤드 수")
-class HarShadNumberTest {
+class HarshadNumberTest {
 
-    HarShadNumber harShadNumber = new HarShadNumber();
+    HarshadNumber harshadNumber = new HarshadNumber();
 
     @Test
     void testCase1() {
         int arr = 10;
 
-        assertThat(harShadNumber.solution(arr)).isTrue();
+        assertThat(harshadNumber.solution(arr)).isTrue();
     }
 
     @Test
     void testCase2() {
         int arr = 12;
 
-        assertThat(harShadNumber.solution(arr)).isTrue();
+        assertThat(harshadNumber.solution(arr)).isTrue();
     }
 
     @Test
     void testCase3() {
         int arr = 11;
 
-        assertThat(harShadNumber.solution(arr)).isFalse();
+        assertThat(harshadNumber.solution(arr)).isFalse();
     }
 
     @Test
     void testCase4() {
         int arr = 13;
 
-        assertThat(harShadNumber.solution(arr)).isFalse();
+        assertThat(harshadNumber.solution(arr)).isFalse();
     }
 }
