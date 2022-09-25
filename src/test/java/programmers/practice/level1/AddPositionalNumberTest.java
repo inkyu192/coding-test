@@ -6,9 +6,9 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @DisplayName("자릿수 더하기")
-class AddDigitsTest {
+class AddPositionalNumberTest {
 
-    AddDigits addDigits = new AddDigits();
+    AddPositionalNumber addDigits = new AddPositionalNumber();
 
     @Test
     void testCase1() {
