@@ -6,9 +6,9 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @DisplayName("정수 내림차순으로 배치하기")
-class PlacingIntegersInDescendingOrderTest {
+class PlaceIntegerDescendingTest {
 
-    PlacingIntegersInDescendingOrder placingIntegersInDescendingOrder = new PlacingIntegersInDescendingOrder();
+    PlaceIntegerDescending placeIntegerDescending = new PlaceIntegerDescending();
 
     @Test
     void testCase1() {
@@ -16,6 +16,6 @@ class PlacingIntegersInDescendingOrderTest {
 
         long expected = 873211;
 
-        assertThat(placingIntegersInDescendingOrder.solution(n)).isEqualTo(expected);
+        assertThat(placeIntegerDescending.solution(n)).isEqualTo(expected);
     }
 }
