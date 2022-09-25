@@ -6,9 +6,9 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @DisplayName("정수 제곱근 판별")
-class DetermineTheSquareRootOfAnIntegerTest {
+class DetermineIntegerSquareRootTest {
 
-    DetermineTheSquareRootOfAnInteger determineTheSquareRootOfAnInteger = new DetermineTheSquareRootOfAnInteger();
+    DetermineIntegerSquareRoot determineIntegerSquareRoot = new DetermineIntegerSquareRoot();
 
     @Test
     void testCase1() {
@@ -16,7 +16,7 @@ class DetermineTheSquareRootOfAnIntegerTest {
 
         long expected = 144;
 
-        assertThat(determineTheSquareRootOfAnInteger.solution(n)).isEqualTo(expected);
+        assertThat(determineIntegerSquareRoot.solution(n)).isEqualTo(expected);
     }
 
     @Test
@@ -25,6 +25,6 @@ class DetermineTheSquareRootOfAnIntegerTest {
 
         long expected = -1;
 
-        assertThat(determineTheSquareRootOfAnInteger.solution(n)).isEqualTo(expected);
+        assertThat(determineIntegerSquareRoot.solution(n)).isEqualTo(expected);
     }
 }
