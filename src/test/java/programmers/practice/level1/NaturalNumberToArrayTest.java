@@ -6,9 +6,9 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @DisplayName("자연수 뒤집어 배열로 만들기")
-class FlipNaturalNumbersToFormAnArrayTest {
+class NaturalNumberToArrayTest {
 
-    FlipNaturalNumbersToFormAnArray flipNaturalNumbersToFormAnArray = new FlipNaturalNumbersToFormAnArray();
+    NaturalNumberToArray naturalNumberToArray = new NaturalNumberToArray();
 
     @Test
     void testCase1() {
@@ -16,7 +16,7 @@ class FlipNaturalNumbersToFormAnArrayTest {
 
         int[] expected = {5, 4, 3, 2, 1};
 
-        assertThat(flipNaturalNumbersToFormAnArray.solution(n)).isEqualTo(expected);
+        assertThat(naturalNumberToArray.solution(n)).isEqualTo(expected);
     }
 
     @Test
@@ -25,6 +25,6 @@ class FlipNaturalNumbersToFormAnArrayTest {
 
         int[] expected = {5, 3, 7, 1, 9};
 
-        assertThat(flipNaturalNumbersToFormAnArray.solution(n)).isEqualTo(expected);
+        assertThat(naturalNumberToArray.solution(n)).isEqualTo(expected);
     }
 }
