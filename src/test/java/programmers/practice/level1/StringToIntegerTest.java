@@ -6,9 +6,9 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @DisplayName("문자열을 정수로 바꾸기")
-class ConvertStringToIntegerTest {
+class StringToIntegerTest {
 
-    ConvertStringToInteger convertStringToInteger = new ConvertStringToInteger();
+    StringToInteger stringToInteger = new StringToInteger();
 
     @Test
     void testCase1() {
@@ -16,7 +16,7 @@ class ConvertStringToIntegerTest {
 
         int expected = 1234;
 
-        assertThat(convertStringToInteger.solution(s)).isEqualTo(expected);
+        assertThat(stringToInteger.solution(s)).isEqualTo(expected);
     }
 
     @Test
@@ -25,6 +25,6 @@ class ConvertStringToIntegerTest {
 
         int expected = -1234;
 
-        assertThat(convertStringToInteger.solution(s)).isEqualTo(expected);
+        assertThat(stringToInteger.solution(s)).isEqualTo(expected);
     }
 }
