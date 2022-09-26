@@ -6,9 +6,9 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @DisplayName("3진법 뒤집기")
-class TernaryNumeralSystemFlipOverTest {
+class TernaryReverseTest {
 
-    TernaryNumeralSystemFlipOver ternaryNumeralSystemFlipOver = new TernaryNumeralSystemFlipOver();
+    TernaryReverse ternaryReverse = new TernaryReverse();
 
     @Test
     void testCase1() {
@@ -16,7 +16,7 @@ class TernaryNumeralSystemFlipOverTest {
 
         int expected = 7;
 
-        assertThat(ternaryNumeralSystemFlipOver.solution(n)).isEqualTo(expected);
+        assertThat(ternaryReverse.solution(n)).isEqualTo(expected);
     }
 
     @Test
@@ -25,6 +25,6 @@ class TernaryNumeralSystemFlipOverTest {
 
         int expected = 229;
 
-        assertThat(ternaryNumeralSystemFlipOver.solution(n)).isEqualTo(expected);
+        assertThat(ternaryReverse.solution(n)).isEqualTo(expected);
     }
 }
