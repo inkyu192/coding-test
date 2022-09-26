@@ -6,9 +6,9 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @DisplayName("자릿수 더하기")
-class AddPositionalNumberTest {
+class SumPositionalNumberTest {
 
-    AddPositionalNumber addDigits = new AddPositionalNumber();
+    SumPositionalNumber sumPositionalNumber = new SumPositionalNumber();
 
     @Test
     void testCase1() {
@@ -16,7 +16,7 @@ class AddPositionalNumberTest {
 
         int expected = 6;
 
-        assertThat(addDigits.solution(n)).isEqualTo(expected);
+        assertThat(sumPositionalNumber.solution(n)).isEqualTo(expected);
     }
 
     @Test
@@ -25,7 +25,7 @@ class AddPositionalNumberTest {
 
         int expected = 24;
 
-        assertThat(addDigits.solution(n)).isEqualTo(expected);
+        assertThat(sumPositionalNumber.solution(n)).isEqualTo(expected);
     }
 
     @Test
@@ -34,7 +34,7 @@ class AddPositionalNumberTest {
 
         int expected = 1;
 
-        assertThat(addDigits.solution(n)).isEqualTo(expected);
+        assertThat(sumPositionalNumber.solution(n)).isEqualTo(expected);
     }
 
     @Test
@@ -43,6 +43,6 @@ class AddPositionalNumberTest {
 
         int expected = 72;
 
-        assertThat(addDigits.solution(n)).isEqualTo(expected);
+        assertThat(sumPositionalNumber.solution(n)).isEqualTo(expected);
     }
 }

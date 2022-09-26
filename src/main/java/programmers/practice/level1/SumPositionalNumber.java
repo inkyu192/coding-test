@@ -1,6 +1,6 @@
 package programmers.practice.level1;
 
-public class AddPositionalNumber {
+public class SumPositionalNumber {
 
     public int solution(int n) {
         int answer = 0;
