@@ -6,9 +6,9 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @DisplayName("없는 숫자 더하기")
-class AddMissingNumbersTest {
+class SumMissingNumberTest {
 
-    AddMissingNumbers addMissingNumbers = new AddMissingNumbers();
+    SumMissingNumber sumMissingNumber = new SumMissingNumber();
 
     @Test
     void testCase1() {
@@ -16,7 +16,7 @@ class AddMissingNumbersTest {
 
         int expected = 14;
 
-        assertThat(addMissingNumbers.solution(numbers)).isEqualTo(expected);
+        assertThat(sumMissingNumber.solution(numbers)).isEqualTo(expected);
     }
 
     @Test
@@ -25,6 +25,6 @@ class AddMissingNumbersTest {
 
         int expected = 6;
 
-        assertThat(addMissingNumbers.solution(numbers)).isEqualTo(expected);
+        assertThat(sumMissingNumber.solution(numbers)).isEqualTo(expected);
     }
 }
