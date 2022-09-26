@@ -6,9 +6,9 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @DisplayName("문자열 내림차순으로 배치하기")
-class PlacingStringsInDescendingOrderTest {
+class PlaceStringDescendingTest {
 
-    PlacingStringsInDescendingOrder placingStringsInDescendingOrder = new PlacingStringsInDescendingOrder();
+    PlaceStringDescending placeStringDescending = new PlaceStringDescending();
 
     @Test
     void testCase1() {
@@ -16,7 +16,7 @@ class PlacingStringsInDescendingOrderTest {
 
         String excepted = "gfedcbZ";
 
-        assertThat(placingStringsInDescendingOrder.solution(s)).isEqualTo(excepted);
+        assertThat(placeStringDescending.solution(s)).isEqualTo(excepted);
     }
 
     @Test
@@ -25,6 +25,6 @@ class PlacingStringsInDescendingOrderTest {
 
         String excepted = "gfedcba";
 
-        assertThat(placingStringsInDescendingOrder.solution(s)).isEqualTo(excepted);
+        assertThat(placeStringDescending.solution(s)).isEqualTo(excepted);
     }
 }
