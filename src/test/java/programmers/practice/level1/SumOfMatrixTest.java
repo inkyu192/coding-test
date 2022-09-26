@@ -6,9 +6,9 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @DisplayName("행렬의 덧셈")
-class AdditionOfMatrixTest {
+class SumOfMatrixTest {
 
-    AdditionOfMatrix additionOfMatrix = new AdditionOfMatrix();
+    SumOfMatrix sumOfMatrix = new SumOfMatrix();
 
     @Test
     void testCase1() {
@@ -17,7 +17,7 @@ class AdditionOfMatrixTest {
 
         int[][] expected =  {{4, 6}, {7, 9}};
 
-        assertThat(additionOfMatrix.solution(arr1, arr2)).isEqualTo(expected);
+        assertThat(sumOfMatrix.solution(arr1, arr2)).isEqualTo(expected);
     }
 
     @Test
@@ -27,6 +27,6 @@ class AdditionOfMatrixTest {
 
         int[][] expected =  {{4}, {6}};
 
-        assertThat(additionOfMatrix.solution(arr1, arr2)).isEqualTo(expected);
+        assertThat(sumOfMatrix.solution(arr1, arr2)).isEqualTo(expected);
     }
 }
