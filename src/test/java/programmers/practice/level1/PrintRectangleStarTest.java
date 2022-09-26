@@ -4,17 +4,17 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 @DisplayName("직사각형 별찍기")
-class RectangularStarOutputTest {
+class PrintRectangleStarTest {
 
-    RectangularStarOutput rectangularStarOutput = new RectangularStarOutput();
+    PrintRectangleStar printRectangleStar = new PrintRectangleStar();
 
     @Test
     void testCase1() {
-        rectangularStarOutput.solution(5, 3);
+        printRectangleStar.solution(5, 3);
     }
 
     @Test
     void testCase2() {
-        rectangularStarOutput.solution(2, 2);
+        printRectangleStar.solution(2, 2);
     }
 }
