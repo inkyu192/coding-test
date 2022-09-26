@@ -6,9 +6,9 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @DisplayName("음양 더하기")
-class AddNegativeAmnioticNumberTest {
+class SumNegativeNumberPositiveNumberTest {
 
-    AddNegativeAmnioticNumber addNegativeAmnioticNumber = new AddNegativeAmnioticNumber();
+    SumNegativeNumberPositiveNumber sumNegativeNumberPositiveNumber = new SumNegativeNumberPositiveNumber();
 
     @Test
     void testCase1() {
@@ -17,7 +17,7 @@ class AddNegativeAmnioticNumberTest {
 
         int expected = 9;
 
-        assertThat(addNegativeAmnioticNumber.solution(absolutes, signs)).isEqualTo(expected);
+        assertThat(sumNegativeNumberPositiveNumber.solution(absolutes, signs)).isEqualTo(expected);
     }
 
     @Test
@@ -27,6 +27,6 @@ class AddNegativeAmnioticNumberTest {
 
         int expected = 0;
 
-        assertThat(addNegativeAmnioticNumber.solution(absolutes, signs)).isEqualTo(expected);
+        assertThat(sumNegativeNumberPositiveNumber.solution(absolutes, signs)).isEqualTo(expected);
     }
 }
