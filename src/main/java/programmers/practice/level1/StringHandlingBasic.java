@@ -1,6 +1,6 @@
 package programmers.practice.level1;
 
-public class StringHandlingBasics {
+public class StringHandlingBasic {
 
     public boolean solution(String s) {
         if (s.length() == 4 || s.length() == 6) {
@@ -11,7 +11,6 @@ public class StringHandlingBasics {
                 return false;
             }
         }
-
         return false;
     }
 }
