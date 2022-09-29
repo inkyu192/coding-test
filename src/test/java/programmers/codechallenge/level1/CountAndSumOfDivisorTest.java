@@ -6,9 +6,9 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @DisplayName("약수의 개수와 덧셈")
-class NumberAndAdditionOfDivisorTest {
+class CountAndSumOfDivisorTest {
 
-    NumberAndAdditionOfDivisor numberAndAdditionOfDivisor = new NumberAndAdditionOfDivisor();
+    CountAndSumOfDivisor countAndSumOfDivisor = new CountAndSumOfDivisor();
 
     @Test
     void testCase1() {
@@ -17,7 +17,7 @@ class NumberAndAdditionOfDivisorTest {
 
         int expected = 43;
 
-        assertThat(numberAndAdditionOfDivisor.solution(left, right)).isEqualTo(expected);
+        assertThat(countAndSumOfDivisor.solution(left, right)).isEqualTo(expected);
     }
 
     @Test
@@ -27,6 +27,6 @@ class NumberAndAdditionOfDivisorTest {
 
         int expected = 52;
 
-        assertThat(numberAndAdditionOfDivisor.solution(left, right)).isEqualTo(expected);
+        assertThat(countAndSumOfDivisor.solution(left, right)).isEqualTo(expected);
     }
 }

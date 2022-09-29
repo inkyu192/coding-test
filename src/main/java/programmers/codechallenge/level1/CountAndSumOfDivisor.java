@@ -1,6 +1,6 @@
 package programmers.codechallenge.level1;
 
-public class NumberAndAdditionOfDivisor {
+public class CountAndSumOfDivisor {
 
     public int solution(int left, int right) {
         int answer = 0;
