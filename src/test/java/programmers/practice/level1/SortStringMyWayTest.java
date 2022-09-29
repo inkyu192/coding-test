@@ -6,9 +6,9 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @DisplayName("문자열 내 마음대로 정렬하기")
-class SortingStringsMyOwnWayTest {
+class SortStringMyWayTest {
 
-    SortingStringsMyOwnWay sortingStringsMyOwnWay = new SortingStringsMyOwnWay();
+    SortStringMyWay sortStringMyWay = new SortStringMyWay();
 
     @Test
     void testCase1() {
@@ -17,7 +17,7 @@ class SortingStringsMyOwnWayTest {
 
         String[] expected = {"car", "bed", "sun"};
 
-        assertThat(sortingStringsMyOwnWay.solution(strings, n)).isEqualTo(expected);
+        assertThat(sortStringMyWay.solution(strings, n)).isEqualTo(expected);
     }
 
     @Test
@@ -27,6 +27,6 @@ class SortingStringsMyOwnWayTest {
 
         String[] expected = {"abcd", "abce", "cdx"};
 
-        assertThat(sortingStringsMyOwnWay.solution(strings, n)).isEqualTo(expected);
+        assertThat(sortStringMyWay.solution(strings, n)).isEqualTo(expected);
     }
 }
