@@ -6,9 +6,9 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @DisplayName("숫자 문자열과 영단어")
-class NumericStringsAndEnglishWordsTest {
+class NumericStringAndEnglishWordTest {
 
-    NumericStringsAndEnglishWords numericStringsAndEnglishWords = new NumericStringsAndEnglishWords();
+    NumericStringAndEnglishWord numericStringAndEnglishWord = new NumericStringAndEnglishWord();
 
     @Test
     void testCase1() {
@@ -16,7 +16,7 @@ class NumericStringsAndEnglishWordsTest {
 
         int expected = 1478;
 
-        assertThat(numericStringsAndEnglishWords.solution(s)).isEqualTo(expected);
+        assertThat(numericStringAndEnglishWord.solution(s)).isEqualTo(expected);
     }
 
     @Test
@@ -25,7 +25,7 @@ class NumericStringsAndEnglishWordsTest {
 
         int expected = 234567;
 
-        assertThat(numericStringsAndEnglishWords.solution(s)).isEqualTo(expected);
+        assertThat(numericStringAndEnglishWord.solution(s)).isEqualTo(expected);
     }
 
     @Test
@@ -34,7 +34,7 @@ class NumericStringsAndEnglishWordsTest {
 
         int expected = 234567;
 
-        assertThat(numericStringsAndEnglishWords.solution(s)).isEqualTo(expected);
+        assertThat(numericStringAndEnglishWord.solution(s)).isEqualTo(expected);
     }
 
     @Test
@@ -43,7 +43,7 @@ class NumericStringsAndEnglishWordsTest {
 
         int expected = 123;
 
-        assertThat(numericStringsAndEnglishWords.solution(s)).isEqualTo(expected);
+        assertThat(numericStringAndEnglishWord.solution(s)).isEqualTo(expected);
     }
 
     @Test
@@ -52,6 +52,6 @@ class NumericStringsAndEnglishWordsTest {
 
         int expected = 2345676;
 
-        assertThat(numericStringsAndEnglishWords.solution(s)).isEqualTo(expected);
+        assertThat(numericStringAndEnglishWord.solution(s)).isEqualTo(expected);
     }
 }
