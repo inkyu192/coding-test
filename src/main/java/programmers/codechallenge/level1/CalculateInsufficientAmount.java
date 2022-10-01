@@ -1,14 +1,14 @@
 package programmers.codechallenge.level1;
 
-public class CalculateTheShortfall {
+public class CalculateInsufficientAmount {
 
     public long solution(int price, int money, int count) {
-        long sum = 0;
+        long answer = 0;
 
         for (int i = 1; i <= count; i++) {
-            sum += price * i;
+            answer += price * i;
         }
 
-        return sum > money ? sum - money : 0;
+        return (answer > money) ? answer - money : 0;
     }
 }

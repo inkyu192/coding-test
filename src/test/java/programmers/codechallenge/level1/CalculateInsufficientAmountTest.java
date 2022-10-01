@@ -6,9 +6,9 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @DisplayName("부족한 금액 계산하기")
-class CalculateTheShortfallTest {
+class CalculateInsufficientAmountTest {
 
-    CalculateTheShortfall calculateTheShortfall = new CalculateTheShortfall();
+    CalculateInsufficientAmount calculateInsufficientAmount = new CalculateInsufficientAmount();
 
     @Test
     void testCase1() {
@@ -18,6 +18,6 @@ class CalculateTheShortfallTest {
 
         long expected = 10;
 
-        assertThat(calculateTheShortfall.solution(price, money, count)).isEqualTo(expected);
+        assertThat(calculateInsufficientAmount.solution(price, money, count)).isEqualTo(expected);
     }
 }
