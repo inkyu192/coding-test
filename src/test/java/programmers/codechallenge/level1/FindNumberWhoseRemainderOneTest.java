@@ -6,9 +6,9 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @DisplayName("나머지가 1이 되는 수 찾기")
-class FindANumberWhoseRemainderIs1Test {
+class FindNumberWhoseRemainderOneTest {
 
-    FindANumberWhoseRemainderIs1 findANumberWhoseRemainderIs1 = new FindANumberWhoseRemainderIs1();
+    FindNumberWhoseRemainderOne findNumberWhoseRemainderOne = new FindNumberWhoseRemainderOne();
 
     @Test
     void testCase1() {
@@ -16,7 +16,7 @@ class FindANumberWhoseRemainderIs1Test {
 
         int expected = 3;
 
-        assertThat(findANumberWhoseRemainderIs1.solution(n)).isEqualTo(expected);
+        assertThat(findNumberWhoseRemainderOne.solution(n)).isEqualTo(expected);
     }
 
     @Test
@@ -25,6 +25,6 @@ class FindANumberWhoseRemainderIs1Test {
 
         int expected = 11;
 
-        assertThat(findANumberWhoseRemainderIs1.solution(n)).isEqualTo(expected);
+        assertThat(findNumberWhoseRemainderOne.solution(n)).isEqualTo(expected);
     }
 }
