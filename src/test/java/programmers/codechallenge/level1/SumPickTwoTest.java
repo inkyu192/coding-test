@@ -6,9 +6,9 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @DisplayName("두 개 뽑아서 더하기")
-class TakeTwoAndAddTest {
+class SumPickTwoTest {
 
-    TakeTwoAndAdd takeTwoAndAdd = new TakeTwoAndAdd();
+    SumPickTwo sumPickTwo = new SumPickTwo();
 
     @Test
     void testCase1() {
@@ -16,7 +16,7 @@ class TakeTwoAndAddTest {
 
         int[] expected = {2, 3, 4, 5, 6, 7};
 
-        assertThat(takeTwoAndAdd.solution(numbers)).isEqualTo(expected);
+        assertThat(sumPickTwo.solution(numbers)).isEqualTo(expected);
     }
 
     @Test
@@ -25,6 +25,6 @@ class TakeTwoAndAddTest {
 
         int[] expected = {2, 5, 7, 9, 12};
 
-        assertThat(takeTwoAndAdd.solution(numbers)).isEqualTo(expected);
+        assertThat(sumPickTwo.solution(numbers)).isEqualTo(expected);
     }
 }
