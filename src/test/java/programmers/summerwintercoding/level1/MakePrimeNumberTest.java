@@ -6,9 +6,9 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @DisplayName("소수 만들기")
-class MakeAPrimeNumberTest {
+class MakePrimeNumberTest {
 
-    MakeAPrimeNumber makeAPrimeNumber = new MakeAPrimeNumber();
+    MakePrimeNumber makePrimeNumber = new MakePrimeNumber();
 
     @Test
     void testCase1() {
@@ -16,7 +16,7 @@ class MakeAPrimeNumberTest {
 
         int expected = 1;
 
-        assertThat(makeAPrimeNumber.solution(nums)).isEqualTo(expected);
+        assertThat(makePrimeNumber.solution(nums)).isEqualTo(expected);
     }
 
     @Test
@@ -25,6 +25,6 @@ class MakeAPrimeNumberTest {
 
         int expected = 4;
 
-        assertThat(makeAPrimeNumber.solution(nums)).isEqualTo(expected);
+        assertThat(makePrimeNumber.solution(nums)).isEqualTo(expected);
     }
 }
