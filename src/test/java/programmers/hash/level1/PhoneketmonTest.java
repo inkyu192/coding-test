@@ -6,9 +6,9 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @DisplayName("폰켓몬")
-class PokemonTest {
+class PhoneketmonTest {
 
-    Pokemon pokemon = new Pokemon();
+    Phoneketmon phoneketmon = new Phoneketmon();
 
     @Test
     void testCase1() {
@@ -16,7 +16,7 @@ class PokemonTest {
 
         int expected = 2;
 
-        assertThat(pokemon.solution(nums)).isEqualTo(expected);
+        assertThat(phoneketmon.solution(nums)).isEqualTo(expected);
     }
 
     @Test
@@ -25,7 +25,7 @@ class PokemonTest {
 
         int expected = 3;
 
-        assertThat(pokemon.solution(nums)).isEqualTo(expected);
+        assertThat(phoneketmon.solution(nums)).isEqualTo(expected);
     }
 
     @Test
@@ -34,6 +34,6 @@ class PokemonTest {
 
         int expected = 2;
 
-        assertThat(pokemon.solution(nums)).isEqualTo(expected);
+        assertThat(phoneketmon.solution(nums)).isEqualTo(expected);
     }
 }
