@@ -6,9 +6,9 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @DisplayName("같은 숫자는 싫어")
-class IHateTheSameNumberTest {
+class HateSameNumberTest {
 
-    IHateTheSameNumber iHateTheSameNumber = new IHateTheSameNumber();
+    HateSameNumber hateSameNumber = new HateSameNumber();
 
     @Test
     void testCase1() {
@@ -16,7 +16,7 @@ class IHateTheSameNumberTest {
 
         int[] expected = {1, 3, 0, 1};
 
-        assertThat(iHateTheSameNumber.solution(arr)).isEqualTo(expected);
+        assertThat(hateSameNumber.solution(arr)).isEqualTo(expected);
     }
 
     @Test
@@ -25,6 +25,6 @@ class IHateTheSameNumberTest {
 
         int[] expected = {4, 3};
 
-        assertThat(iHateTheSameNumber.solution(arr)).isEqualTo(expected);
+        assertThat(hateSameNumber.solution(arr)).isEqualTo(expected);
     }
 }
