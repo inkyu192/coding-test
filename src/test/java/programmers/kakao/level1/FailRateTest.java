@@ -6,9 +6,9 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @DisplayName("실패율")
-class FailureStageTest {
+class FailRateTest {
 
-    FailureRate failureRate = new FailureRate();
+    FailRate failRate = new FailRate();
 
     @Test
     void testCase1() {
@@ -17,7 +17,7 @@ class FailureStageTest {
 
         int[] expected = {3, 4, 2, 1, 5};
 
-        assertThat(failureRate.solution(N, stages)).isEqualTo(expected);
+        assertThat(failRate.solution(N, stages)).isEqualTo(expected);
     }
 
     @Test
@@ -27,6 +27,6 @@ class FailureStageTest {
 
         int[] expected = {4, 1, 2, 3};
 
-        assertThat(failureRate.solution(N, stages)).isEqualTo(expected);
+        assertThat(failRate.solution(N, stages)).isEqualTo(expected);
     }
 }
