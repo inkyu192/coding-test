@@ -27,4 +27,13 @@ class HideCellPhoneNumberTest {
 
         assertThat(hideCellPhoneNumber.solution(phone_number)).isEqualTo(expected);
     }
+
+    @Test
+    void testCase3() {
+        String phone_number = "1234";
+
+        String expected = "1234";
+
+        assertThat(hideCellPhoneNumber.solution(phone_number)).isEqualTo(expected);
+    }
 }
