@@ -6,9 +6,9 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @DisplayName("로또의 최고 순위와 최저 순위")
-class TheHighestAndLowestRanksOfTheLotteryTest {
+class HighestAndLowestOfTheLotteryTest {
 
-    TheHighestAndLowestRanksOfTheLottery theHighestAndLowestRanksOfTheLottery = new TheHighestAndLowestRanksOfTheLottery();
+    HighestAndLowestOfTheLottery highestAndLowestOfTheLottery = new HighestAndLowestOfTheLottery();
 
     @Test
     void testCase1() {
@@ -17,7 +17,7 @@ class TheHighestAndLowestRanksOfTheLotteryTest {
 
         int[] result = {3, 5};
 
-        assertThat(theHighestAndLowestRanksOfTheLottery.solution(lottos, win_nums)).isEqualTo(result);
+        assertThat(highestAndLowestOfTheLottery.solution(lottos, win_nums)).isEqualTo(result);
     }
 
     @Test
@@ -27,7 +27,7 @@ class TheHighestAndLowestRanksOfTheLotteryTest {
 
         int[] result = {1, 6};
 
-        assertThat(theHighestAndLowestRanksOfTheLottery.solution(lottos, win_nums)).isEqualTo(result);
+        assertThat(highestAndLowestOfTheLottery.solution(lottos, win_nums)).isEqualTo(result);
     }
 
     @Test
@@ -37,6 +37,6 @@ class TheHighestAndLowestRanksOfTheLotteryTest {
 
         int[] result = {1, 1};
 
-        assertThat(theHighestAndLowestRanksOfTheLottery.solution(lottos, win_nums)).isEqualTo(result);
+        assertThat(highestAndLowestOfTheLottery.solution(lottos, win_nums)).isEqualTo(result);
     }
 }
