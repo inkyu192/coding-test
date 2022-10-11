@@ -1,14 +1,27 @@
 package programmers.practice.level1;
 
-import java.util.Arrays;
-
 public class RemoveSmallestNumber {
 
     public int[] solution(int[] arr) {
-        if (arr.length <= 1) return new int[]{-1};
+        if (arr.length == 1) return new int[]{-1};
 
-        int min = Arrays.stream(arr).min().getAsInt();
-        int[] answer = Arrays.stream(arr).filter(num -> num != min).toArray();
+        int minIndex = 0;
+
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[minIndex] > arr[i]) {
+                minIndex = i;
+            }
+        }
+
+        for (int i = minIndex + 1; i < arr.length; i++) {
+            arr[i - 1] = arr[i];
+        }
+
+        int[] answer = new int[arr.length - 1];
+
+        for (int i = 0; i < answer.length; i++) {
+            answer[i] = arr[i];
+        }
 
         return answer;
     }
