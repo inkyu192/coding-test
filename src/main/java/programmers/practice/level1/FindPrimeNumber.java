@@ -4,22 +4,22 @@ public class FindPrimeNumber {
 
     public int solution(int n) {
         int answer = 0;
-        int[] number = new int[n + 1];
+        int[] ints = new int[n + 1];
 
         for (int i = 2; i <= n; i++) {
-            number[i] = i;
+            ints[i] = i;
         }
 
         for (int i = 2; i <= n; i++) {
-            if (number[i] == 0) continue;
+            if (ints[i] == 0) continue;
 
-            for (int j = 2 * i; j <= n; j += i) {
-                number[j] = 0;
+            for (int j = i * 2; j <= n; j += i) {
+                ints[j] = 0;
             }
         }
 
-        for (int i = 0; i < number.length; i++) {
-            if (number[i] != 0) answer++;
+        for (int i = 0; i < ints.length; i++) {
+            if (ints[i] != 0) answer++;
         }
 
         return answer;
