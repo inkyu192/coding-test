@@ -3,17 +3,17 @@ package programmers.fullsearch.level1;
 public class MinimumRectangle {
 
     public int solution(int[][] sizes) {
-        int maxSide = 0;
-        int minSide = 0;
+        int width = 0;
+        int height = 0;
 
-        for (int[] size : sizes) {
-            int max = Math.max(size[0], size[1]);
-            int min = Math.min(size[0], size[1]);
+        for (int i = 0; i < sizes.length; i++) {
+            int max = Math.max(sizes[i][0], sizes[i][1]);
+            int min = Math.min(sizes[i][0], sizes[i][1]);
 
-            maxSide = Math.max(maxSide, max);
-            minSide = Math.max(minSide, min);
+            width = Math.max(width, max);
+            height = Math.max(height, min);
         }
 
-        return maxSide * minSide;
+        return width * height;
     }
 }
