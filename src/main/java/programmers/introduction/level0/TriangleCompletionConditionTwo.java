@@ -15,7 +15,6 @@ public class TriangleCompletionConditionTwo {
             answer++;
         }
 
-        //return min + min - 1;
         return answer;
     }
 }

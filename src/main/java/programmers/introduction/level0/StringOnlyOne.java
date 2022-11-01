@@ -11,8 +11,7 @@ public class StringOnlyOne {
         HashMap<String, Integer> map = new HashMap<>();
 
         for (String s1 : split) {
-            map.putIfAbsent(s1, 0);
-            map.put(s1, map.get(s1) + 1);
+            map.put(s1, map.getOrDefault(s1, 0) + 1);
         }
 
         ArrayList<String> list = new ArrayList<>();

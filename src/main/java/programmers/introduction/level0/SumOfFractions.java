@@ -1,21 +1,13 @@
 package programmers.introduction.level0;
 
-public class DetermineFinitePrime {
+public class SumOfFractions {
 
-    public int solution(int a, int b) {
-        int num = b / gcd(a, b);
+    public int[] solution(int denum1, int num1, int denum2, int num2) {
+        int denum3 = denum1 * num2 + denum2 * num1;
+        int num3 = num1 * num2;
+        int gcd = gcd(denum3, num3);
 
-        while (num > 1) {
-            if (num % 2 == 0) {
-                num /= 2;
-            } else if (num % 5 == 0) {
-                num /= 5;
-            } else {
-                return 2;
-            }
-        }
-
-        return 1;
+        return new int[]{denum3 / gcd, num3 / gcd};
     }
 
     // 유클리드 호제법
