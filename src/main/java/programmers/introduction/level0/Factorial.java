@@ -20,6 +20,6 @@ public class Factorial {
             }
         }
 
-        return answer--;
+        return answer;
     }
 }

@@ -1,24 +1,23 @@
 package programmers.introduction.level0;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
+import java.util.*;
 
 public class StringOnlyOne {
 
     public String solution(String s) {
         String[] split = s.split("");
-        HashMap<String, Integer> map = new HashMap<>();
+        Map<String, Integer> map = new HashMap<>();
 
-        for (String s1 : split) {
-            map.put(s1, map.getOrDefault(s1, 0) + 1);
+        for (int i = 0; i < split.length; i++) {
+            String str = split[i];
+            map.put(str, map.getOrDefault(str, 0) + 1);
         }
 
-        ArrayList<String> list = new ArrayList<>();
+        List<String> list = new ArrayList<>();
 
-        map.forEach((key, value) -> {
-            if (value == 1) list.add(key);
-        });
+        for (String key : map.keySet()) {
+            if (map.get(key) == 1) list.add(key);
+        }
 
         Collections.sort(list);
 

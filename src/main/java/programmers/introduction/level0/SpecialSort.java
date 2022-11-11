@@ -13,22 +13,22 @@ public class SpecialSort {
         }
 
         Arrays.sort(array, (o1, o2) -> {
-            int abs1 = Math.abs(n - o1);
-            int abs2 = Math.abs(n - o2);
+            int abs1 = Math.abs(o1 - n);
+            int abs2 = Math.abs(o2 - n);
 
             if (abs1 == abs2) {
-                return o2 - o1;
+                return Integer.compare(o2, o1);
+            } else {
+                return Integer.compare(abs1, abs2);
             }
-
-            return abs1 - abs2;
         });
 
-        int[] answer = new int[numlist.length];
+        int[] result = new int[array.length];
 
         for (int i = 0; i < array.length; i++) {
-            answer[i] = array[i];
+            result[i] = array[i];
         }
 
-        return answer;
+        return result;
     }
 }

@@ -9,10 +9,7 @@ public class LengthOfOverlappingLineSegments {
         Map<Integer, Integer> map = new HashMap<>();
 
         for (int i = 0; i < lines.length; i++) {
-            int min = Math.min(lines[i][0], lines[i][1]);
-            int max = Math.max(lines[i][0], lines[i][1]);
-
-            for (int j = min; j < max; j++) {
+            for (int j = lines[i][0]; j < lines[i][1]; j++) {
                 map.put(j, map.getOrDefault(j, 0) + 1);
             }
         }

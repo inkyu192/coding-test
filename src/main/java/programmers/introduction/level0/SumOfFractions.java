@@ -12,8 +12,8 @@ public class SumOfFractions {
 
     // 유클리드 호제법
     private int gcd(int a, int b) {
-        int max = Math.max(a, b);
         int min = Math.min(a, b);
+        int max = Math.max(a, b);
 
         int remainder = max % min;
 

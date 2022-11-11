@@ -3,12 +3,12 @@ package programmers.introduction.level0;
 public class CutAndSaveArray {
 
     public String[] solution(String my_str, int n) {
-        String[] answer = {};
+        String[] answer;
 
         if (my_str.length() % n == 0) {
             answer = new String[my_str.length() / n];
         } else {
-            answer = new String[my_str.length() /n  + 1];
+            answer = new String[my_str.length() / n + 1];
         }
 
         int beginIndex = 0;

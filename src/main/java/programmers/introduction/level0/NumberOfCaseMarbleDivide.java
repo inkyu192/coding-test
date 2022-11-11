@@ -9,14 +9,12 @@ public class NumberOfCaseMarbleDivide {
     }
 
     private BigInteger factorial(int num) {
-        BigInteger result = BigInteger.ONE;
-        BigInteger from = BigInteger.ONE;
-        BigInteger to = new BigInteger(String.valueOf(num));
+        BigInteger bi = BigInteger.ONE;
 
-        for (BigInteger i = from; i.compareTo(to) <= 0; i = i.add(BigInteger.ONE)) {
-            result = result.multiply(i);
+        for (int i = 1; i <= num; i++) {
+            bi = bi.multiply(new BigInteger(String.valueOf(i)));
         }
 
-        return result;
+        return bi;
     }
 }

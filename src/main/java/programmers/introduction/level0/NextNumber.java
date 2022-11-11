@@ -3,16 +3,12 @@ package programmers.introduction.level0;
 public class NextNumber {
 
     public int solution(int[] common) {
-        int answer = 0;
+        int answer;
 
-        int a = common[0];
-        int b = common[1];
-        int c = common[2];
-
-        if (b - a == c - b) {
-            answer = common[common.length - 1] + (b - a);
+        if (common[2] - common[1] == common[1] - common[0]) {
+            answer = common[common.length - 1] + common[1] - common[0];
         } else {
-            answer = common[common.length - 1] * (b / a);
+            answer = common[common.length - 1] * (common[1] / common[0]);
         }
 
         return answer;

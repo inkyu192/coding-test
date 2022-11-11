@@ -10,16 +10,15 @@ public class Parallel {
 
         for (int i = 0; i < dots.length; i++) {
             for (int j = i + 1; j < dots.length; j++) {
-                double slope = (double) dots[i][0] - dots[j][0] / (double) dots[i][1] - dots[j][1];
+                double value = (double) (dots[i][0] - dots[j][0]) / (dots[i][1] - dots[j][1]);
 
-                if (set.contains(slope)) {
+                if (set.contains(value)) {
                     return 1;
                 } else {
-                    set.add(slope);
+                    set.add(value);
                 }
             }
         }
-
         return 0;
     }
 }

@@ -1,11 +1,12 @@
 package programmers.introduction.level0;
 
+import java.util.Set;
 import java.util.TreeSet;
 
 public class ActorizationInPrimeFactors {
 
     public int[] solution(int n) {
-        TreeSet<Integer> set = new TreeSet<>();
+        Set<Integer> set = new TreeSet<>();
         int num = 2;
 
         while (n > 1) {
@@ -17,8 +18,8 @@ public class ActorizationInPrimeFactors {
             }
         }
 
-        int index = 0;
         int[] answer = new int[set.size()];
+        int index = 0;
 
         for (Integer integer : set) {
             answer[index] = integer;
