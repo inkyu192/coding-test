@@ -1,18 +1,25 @@
 package programmers.hash.level1;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class PlayersWhoDidNotComplete {
 
     public String solution(String[] participant, String[] completion) {
-        HashMap<String, Integer> map = new HashMap<>();
+        Map<String, Integer> map = new HashMap<>();
 
-        for (String name : participant) map.put(name, map.getOrDefault(name, 0) + 1);
-        for (String name : completion) map.put(name, map.get(name) - 1);
+        for (String s : completion) {
+            map.put(s, map.getOrDefault(s, 0) + 1);
+        }
+
+        for (String s : participant) {
+            map.put(s, map.getOrDefault(s, 0) - 1);
+        }
 
         String answer = "";
+
         for (String key : map.keySet()) {
-            if (map.get(key) != 0) answer = key;
+            if (map.get(key) == -1) answer = key;
         }
 
         return answer;

@@ -6,15 +6,15 @@ public class CaesarCipher {
         StringBuilder sb = new StringBuilder();
 
         for (int i = 0; i < s.length(); i++) {
-            char c = s.charAt(i);
+            char ch = s.charAt(i);
 
-            if (Character.isUpperCase(c)) {
-                c = c + n > 'Z' ? (char) (c + n - 26) : (char) (c + n);
-            } else if (Character.isLowerCase(c)) {
-                c = c + n > 'z' ? (char) (c + n - 26) : (char) (c + n);
+            if (Character.isUpperCase(ch)) {
+                ch = ch + n > 'Z' ? (char) (ch + n - 26) : (char) (ch + n);
+            } else if (Character.isLowerCase(ch)) {
+                ch = ch + n > 'z' ? (char) (ch + n - 26) : (char) (ch + n);
             }
 
-            sb.append(c);
+            sb.append(ch);
         }
 
         return sb.toString();

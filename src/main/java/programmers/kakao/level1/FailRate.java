@@ -5,38 +5,28 @@ import java.util.*;
 public class FailRate {
 
     public int[] solution(int N, int[] stages) {
-        HashMap<Integer, Double> map = new HashMap<>();
+        Map<Integer, Double> map = new HashMap<>();
 
-        for (int i = 0; i < N; i++) {
-            int stage = i + 1;
-            double unClear = 0;
-            double clear = 0;
+        for (int i = 1; i <= N; i++) {
+            int tryCnt = 0;
+            int failCnt = 0;
 
-            for (int j = 0; j < stages.length; j++) {
-                if (stages[j] == stage) unClear++;
-                if (stages[j] >= stage) clear++;
+            for (int stage : stages) {
+                if (stage >= i) tryCnt++;
+                if (stage == i) failCnt++;
             }
 
-            if (clear != 0) {
-                map.put(stage, unClear / clear);
-            } else {
-                map.put(stage, 0.0);
-            }
+            map.put(i, tryCnt == 0 ? 0.0 : (double) failCnt / tryCnt);
         }
 
-        ArrayList<Object> list = new ArrayList<>();
+        List<Integer> list = new ArrayList<>(map.keySet());
 
-        list.addAll(map.keySet());
+        list.sort((o1, o2) -> map.get(o2).compareTo(map.get(o1)));
 
-        Collections.sort(list, (o1, o2) -> {
-            Double d1 = map.get(o1);
-            Double d2 = map.get(o2);
-            return d2.compareTo(d1);
-        });
+        int[] answer = new int[N];
 
-        int[] answer = new int[list.size()];
         for (int i = 0; i < list.size(); i++) {
-            answer[i] = (int) list.get(i);
+            answer[i] = list.get(i);
         }
 
         return answer;

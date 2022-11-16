@@ -3,35 +3,33 @@ package programmers.kakao.level1;
 public class NewIDRecommendation {
 
     public String solution(String new_id) {
-        String answer = new_id;
+        // step1
+        new_id = new_id.toLowerCase();
 
-        //step1
-        answer = answer.toLowerCase();
+        // step2
+        new_id = new_id.replaceAll("[^a-z0-9-_.]", "");
 
-        //step2
-        answer = answer.replaceAll("[^-_.a-z0-9]", "");
+        // step3
+        new_id = new_id.replaceAll("[.]{2,}", ".");
 
-        //step3
-        answer = answer.replaceAll("[.]{2,}", ".");
+        // step4
+        if (new_id.startsWith(".")) new_id = new_id.substring(1);
+        if (new_id.endsWith(".")) new_id = new_id.substring(0, new_id.length() - 1);
 
-        //step4
-        if (answer.startsWith(".")) answer = answer.substring(1);
-        if (answer.endsWith(".")) answer = answer.substring(0, answer.length() - 1);
+        // step5
+        if (new_id.isEmpty()) new_id = "a";
 
-        //step5
-        if (answer.isEmpty()) {
-            answer = "a";
+        // step6
+        if (new_id.length() >= 16) new_id = new_id.substring(0, 15);
+        if (new_id.endsWith(".")) new_id = new_id.substring(0, new_id.length() - 1);
+
+        // step7
+        if (new_id.length() <= 2) {
+            while (new_id.length() < 3) {
+                new_id += new_id.substring(new_id.length() - 1);
+            }
         }
 
-        //step6
-        if (answer.length() >= 16) answer = answer.substring(0, 15);
-        if (answer.endsWith(".")) answer = answer.substring(0, answer.length() - 1);
-
-        //step7
-        while (answer.length() < 3) {
-            answer += answer.substring(answer.length() - 1);
-        }
-
-        return answer;
+        return new_id;
     }
 }

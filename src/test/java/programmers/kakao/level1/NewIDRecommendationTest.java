@@ -57,7 +57,7 @@ class NewIDRecommendationTest {
 
     @Test
     void testCase6() {
-        String new_id = "..__.abc.._.";
+        String new_id = "..__.abc..........._.";
 
         String expected = "__.abc._";
 

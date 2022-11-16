@@ -3,39 +3,38 @@ package programmers.kakao.level1;
 public class FirstDartGame {
 
     public int solution(String dartResult) {
+        char[] chars = dartResult.toCharArray();
+        StringBuilder sb = new StringBuilder();
         int index = 0;
-        String temp = "";
-        int[] score = {0, 0, 0};
+        int[] scores = new int[3];
 
-        for (int i = 0; i < dartResult.length(); i++) {
-            char c = dartResult.charAt(i);
-
-            if (c == 'S') {
-                score[index] = (int) Math.pow(Double.parseDouble(temp), 1);
-                temp = "";
+        for (char ch : chars) {
+            if (ch == 'S') {
+                scores[index] = (int) Math.pow(Double.parseDouble(sb.toString()), 1);
                 index++;
-            } else if (c == 'D') {
-                score[index] = (int) Math.pow(Double.parseDouble(temp), 2);
-                temp = "";
+                sb.setLength(0);
+            } else if (ch == 'D') {
+                scores[index] = (int) Math.pow(Double.parseDouble(sb.toString()), 2);
                 index++;
-            } else if (c == 'T') {
-                score[index] = (int) Math.pow(Double.parseDouble(temp), 3);
-                temp = "";
+                sb.setLength(0);
+            } else if (ch == 'T') {
+                scores[index] = (int) Math.pow(Double.parseDouble(sb.toString()), 3);
                 index++;
-            } else if (c == '*') {
-                score[index - 1] *= 2;
-                if (index > 1) score[index - 2] *= 2;
-            } else if (c == '#') {
-                score[index - 1] *= -1;
+                sb.setLength(0);
+            } else if (ch == '*') {
+                if (index - 1 != 0) scores[index - 2] *= 2;
+                scores[index - 1] *= 2;
+            } else if (ch == '#') {
+                scores[index - 1] *= -1;
             } else {
-                temp += String.valueOf(c);
+                sb.append(ch);
             }
         }
 
         int answer = 0;
 
-        for (int i : score) {
-            answer += i;
+        for (int score : scores) {
+            answer += score;
         }
 
         return answer;
