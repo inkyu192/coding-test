@@ -1,16 +1,14 @@
 package programmers.introduction.level0;
 
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.*;
-import static org.junit.jupiter.api.Assertions.*;
 
 @DisplayName("최댓값 만들기 (1)")
-class CreateMaxOneTest {
+class MakeMaxOneTest {
 
-    CreateMaxOne createMaxOne = new CreateMaxOne();
+    MakeMaxOne makeMaxOne = new MakeMaxOne();
 
     @Test
     void testCase1() {
@@ -18,7 +16,7 @@ class CreateMaxOneTest {
 
         int expected = 20;
 
-        assertThat(createMaxOne.solution(numbers)).isEqualTo(expected);
+        assertThat(makeMaxOne.solution(numbers)).isEqualTo(expected);
     }
 
 
@@ -28,6 +26,6 @@ class CreateMaxOneTest {
 
         int expected = 744;
 
-        assertThat(createMaxOne.solution(numbers)).isEqualTo(expected);
+        assertThat(makeMaxOne.solution(numbers)).isEqualTo(expected);
     }
 }

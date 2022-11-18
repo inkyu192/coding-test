@@ -1,16 +1,14 @@
 package programmers.introduction.level0;
 
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.*;
-import static org.junit.jupiter.api.Assertions.*;
 
 @DisplayName("최댓값 만들기 (2)")
-class CreateMaxTwoTest {
+class MakeMaxTwoTest {
 
-    CreateMaxTwo createMaxTwo = new CreateMaxTwo();
+    MakeMaxTwo makeMaxTwo = new MakeMaxTwo();
 
     @Test
     void testCase1() {
@@ -18,7 +16,7 @@ class CreateMaxTwoTest {
 
         int expected = 15;
 
-        assertThat(createMaxTwo.solution(numbers)).isEqualTo(expected);
+        assertThat(makeMaxTwo.solution(numbers)).isEqualTo(expected);
     }
 
     @Test
@@ -27,7 +25,7 @@ class CreateMaxTwoTest {
 
         int expected = 240;
 
-        assertThat(createMaxTwo.solution(numbers)).isEqualTo(expected);
+        assertThat(makeMaxTwo.solution(numbers)).isEqualTo(expected);
     }
 
     @Test
@@ -36,6 +34,6 @@ class CreateMaxTwoTest {
 
         int expected = 600;
 
-        assertThat(createMaxTwo.solution(numbers)).isEqualTo(expected);
+        assertThat(makeMaxTwo.solution(numbers)).isEqualTo(expected);
     }
 }

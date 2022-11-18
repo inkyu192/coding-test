@@ -2,7 +2,7 @@ package programmers.introduction.level0;
 
 import java.util.Arrays;
 
-public class CreateMaxOne {
+public class MakeMaxOne {
 
     public int solution(int[] numbers) {
         Arrays.sort(numbers);

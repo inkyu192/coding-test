@@ -1,6 +1,6 @@
 package programmers.introduction.level0;
 
-public class CreateMaxTwo {
+public class MakeMaxTwo {
 
     public int solution(int[] numbers) {
         int answer = Integer.MIN_VALUE;
