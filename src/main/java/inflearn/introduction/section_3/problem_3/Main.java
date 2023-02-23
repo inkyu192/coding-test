@@ -17,7 +17,8 @@ public class Main {
         }
 
         for (int i = k; i < n; i++) {
-            sum += (arr[i] - arr[i - k]);
+            sum += arr[i];
+            sum -= arr[i - k];
             answer = Math.max(answer, sum);
         }
 
