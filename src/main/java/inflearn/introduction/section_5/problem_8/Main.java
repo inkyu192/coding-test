@@ -10,7 +10,7 @@ import java.util.Scanner;
  */
 public class Main {
 
-    class Person {
+    private class Person {
 
         int order;
         int priority;
