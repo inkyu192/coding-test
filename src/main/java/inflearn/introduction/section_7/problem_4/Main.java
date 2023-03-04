@@ -24,7 +24,7 @@ public class Main {
         int n = 45;
         fibo = new int[n + 1];
         T.DFS(n);
-        for (int i = 0; i <= n; i++) {
+        for (int i = 1; i <= n; i++) {
             System.out.print(fibo[i] + " ");
         }
     }

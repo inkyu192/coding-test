@@ -18,11 +18,11 @@ public class Main {
 
     Node root;
 
-    public int DFS(int L, Node root) {
+    public int DFS(int level, Node root) {
         if (root.left == null && root.right == null) {
-            return L;
+            return level;
         } else {
-            return Math.min(DFS(L + 1, root.left), DFS(L + 1, root.right));
+            return Math.min(DFS(level + 1, root.left), DFS(level + 1, root.right));
         }
     }
 

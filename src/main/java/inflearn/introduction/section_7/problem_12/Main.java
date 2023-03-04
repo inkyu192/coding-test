@@ -3,7 +3,7 @@ package inflearn.introduction.section_7.problem_12;
 import java.util.Scanner;
 
 /**
- * 12. 경로탐색(DFS)
+ * 12. 경로탐색(인접행렬)
  */
 public class Main {
 
@@ -12,8 +12,9 @@ public class Main {
     static int[] ch;
 
     public void DFS(int v) {
-        if (v == n) answer++;
-        else {
+        if (v == n) {
+            answer++;
+        } else {
             for (int i = 1; i <= n; i++) {
                 if (graph[v][i] == 1 && ch[i] == 0) {
                     ch[i] = 1;

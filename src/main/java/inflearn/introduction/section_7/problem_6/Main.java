@@ -8,24 +8,17 @@ public class Main {
     static int n;
     static int[] ch;
 
-    public void DFS(int L) {
-        if (L == n + 1) {
-            String tmp = "";
-
-            for (int i = 1; i <= n; i++) {
-                if (ch[i] == 1) {
-                    tmp += (i + " ");
-                }
+    public void DFS(int level) {
+        if (level == n + 1) {
+            for (int i = 0; i < ch.length; i++) {
+                if (ch[i] != 0) System.out.print(i + " ");
             }
-
-            if (tmp.length() > 0) {
-                System.out.println(tmp);
-            }
+            System.out.println();
         } else {
-            ch[L] = 1;
-            DFS(L + 1);
-            ch[L] = 0;
-            DFS(L + 1);
+            ch[level] = 1;
+            DFS(level + 1);
+            ch[level] = 0;
+            DFS(level + 1);
         }
     }
 

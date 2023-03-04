@@ -3,6 +3,9 @@ package inflearn.introduction.section_7.problem_13;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/**
+ * 13. 경로탐색(인접리스트)
+ */
 public class Main {
 
     static int n, m, answer = 0;
@@ -10,13 +13,14 @@ public class Main {
     static int[] ch;
 
     public void DFS(int v) {
-        if (v == n) answer++;
-        else {
-            for (int nv : graph.get(v)) {
-                if (ch[nv] == 0) {
-                    ch[nv] = 1;
-                    DFS(nv);
-                    ch[nv] = 0;
+        if (v == n) {
+            answer++;
+        } else {
+            for (int num : graph.get(v)) {
+                if (ch[num] == 0) {
+                    ch[num] = 1;
+                    DFS(num);
+                    ch[num] = 0;
                 }
             }
         }

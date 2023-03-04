@@ -22,9 +22,11 @@ public class Main {
         if (root == null) {
             return;
         } else {
+//            System.out.print(root.data + " ");
             DFS(root.left);
-            System.out.print(root.data + " ");
+//            System.out.print(root.data + " ");
             DFS(root.right);
+            System.out.print(root.data + " ");
         }
     }
 

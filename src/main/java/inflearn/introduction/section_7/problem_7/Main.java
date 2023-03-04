@@ -22,28 +22,16 @@ public class Main {
     Node root;
 
     public void BFS(Node root) {
-        Queue<Node> Q = new LinkedList<>();
+        Queue<Node> queue = new LinkedList<>();
+        queue.offer(root);
 
-        Q.offer(root);
+        while (!queue.isEmpty()) {
+            Node poll = queue.poll();
 
-        int L = 0;
+            System.out.print(poll.data + " ");
 
-        while (!Q.isEmpty()) {
-            int len = Q.size();
-
-            System.out.print(L + " : ");
-
-            for (int i = 0; i < len; i++) {
-                Node cur = Q.poll();
-
-                System.out.print(cur.data + " ");
-
-                if (cur.left != null) Q.offer(cur.left);
-                if (cur.right != null) Q.offer(cur.right);
-            }
-
-            L++;
-            System.out.println();
+            if (poll.left != null) queue.offer(poll.left);
+            if (poll.right != null) queue.offer(poll.right);
         }
     }
 

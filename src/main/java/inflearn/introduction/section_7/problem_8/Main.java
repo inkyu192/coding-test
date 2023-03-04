@@ -10,10 +10,10 @@ import java.util.Scanner;
 public class Main {
 
     public int BFS(int s, int e) {
-        int[] jump = {1, -1, 5};
+        int[] dis = {1, -1, 5};
 
-        int[] visit = new int[10001];
-        visit[s] = 1;
+        int[] ch = new int[10001];
+        ch[s] = 1;
 
         Queue<Integer> queue = new LinkedList<>();
         queue.offer(s);
@@ -26,14 +26,15 @@ public class Main {
             for (int i = 0; i < size; i++) {
                 int poll = queue.poll();
 
-                for (int j : jump) {
+
+                for (int j : dis) {
                     int next = poll + j;
 
                     if (next == e) return level + 1;
 
-                    if (next >= 1 && next <= 10000 && visit[next] == 0) {
-                        visit[next] = 1;
+                    if (next >= 1 && next <= 10000 && ch[next] == 0) {
                         queue.offer(next);
+                        ch[next] = 1;
                     }
                 }
             }

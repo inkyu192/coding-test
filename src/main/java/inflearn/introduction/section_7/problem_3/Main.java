@@ -15,6 +15,6 @@ public class Main {
 
     public static void main(String[] args) {
         Main T = new Main();
-        System.out.println(T.DFS(6));
+        System.out.println(T.DFS(5));
     }
 }

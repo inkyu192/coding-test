@@ -10,7 +10,7 @@ public class Main {
             return;
         } else {
             DFS(n / 2);
-            System.out.print(n % 2 + " ");
+            System.out.print(n % 2);
         }
     }
 

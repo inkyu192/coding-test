@@ -33,13 +33,10 @@ public class Main {
             for (int i = 0; i < size; i++) {
                 Node poll = queue.poll();
 
-                if (poll.left == null && poll.right == null) {
-                    return level;
-                } else if (poll.left != null) {
-                    queue.offer(poll.left);
-                } else if (poll.right != null) {
-                    queue.offer(poll.right);
-                }
+                if (poll.left == null && poll.right == null) return level;
+
+                if (poll.left != null) queue.offer(poll.left);
+                if (poll.right != null) queue.offer(poll.right);
             }
 
             level++;
