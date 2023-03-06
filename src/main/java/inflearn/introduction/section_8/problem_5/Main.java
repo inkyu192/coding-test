@@ -12,8 +12,8 @@ public class Main {
     static int n, m, answer = Integer.MAX_VALUE;
 
     public void DFS(int level, int sum, Integer[] arr) {
+        if (level > answer) return;
         if (sum > m) return;
-        if (level >= answer) return;
 
         if (sum == m) {
             answer = Math.min(answer, level);

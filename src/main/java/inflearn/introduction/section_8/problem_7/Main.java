@@ -13,12 +13,12 @@ public class Main {
         if (temp[n][r] > 0) return temp[n][r];
 
         if (n == r || r == 0) {
-            return 1;
+            temp[n][r] = 1;
         } else {
             temp[n][r] = DFS(n - 1, r - 1) + DFS(n - 1, r);
-
-            return temp[n][r];
         }
+
+        return temp[n][r];
     }
 
     public static void main(String[] args) {

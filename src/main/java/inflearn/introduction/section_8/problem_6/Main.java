@@ -7,20 +7,20 @@ import java.util.Scanner;
  */
 public class Main {
 
-    static int[] select, visit, arr;
+    static int[] pm, ch, arr;
     static int n, m;
 
     public void DFS(int level) {
         if (level == m) {
-            for (int i : select) System.out.print(i + " ");
+            for (int i : pm) System.out.print(i + " ");
             System.out.println();
         } else {
-            for (int i = 0; i < arr.length; i++) {
-                if (visit[i] == 0) {
-                    select[level] = arr[i];
-                    visit[i] = 1;
+            for (int i = 0; i < n; i++) {
+                if (ch[i] == 0) {
+                    pm[level] = arr[i];
+                    ch[i] = 1;
                     DFS(level + 1);
-                    visit[i] = 0;
+                    ch[i] = 0;
                 }
             }
         }
@@ -33,8 +33,8 @@ public class Main {
         m = kb.nextInt();
         arr = new int[n];
         for (int i = 0; i < n; i++) arr[i] = kb.nextInt();
-        visit = new int[n];
-        select = new int[m];
+        ch = new int[n];
+        pm = new int[m];
         T.DFS(0);
     }
 }

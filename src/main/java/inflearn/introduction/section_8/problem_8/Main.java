@@ -27,10 +27,7 @@ public class Main {
 
         if (level == n) {
             if (sum == f) {
-                for (int i : p) {
-                    System.out.print(i + " ");
-                }
-
+                for (int i : p) System.out.print(i + " ");
                 flag = true;
             }
         } else {
@@ -59,8 +56,3 @@ public class Main {
         T.DFS(0, 0);
     }
 }
-
-//3 1 2 4
-//3+1 1+2 2+4
-//1+1+2+3 1+2+2+4
-//1+1+1+2+2+2+3+4

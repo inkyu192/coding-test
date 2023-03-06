@@ -29,12 +29,11 @@ public class Main {
                 int min = Integer.MAX_VALUE;
 
                 for (int i : combi) {
-                    min = Math.min(min, Math.abs(pz.get(i).x - h.x) + Math.abs(pz.get(i).y - h.y));
+                    min = Math.min(min, Math.abs(h.x - pz.get(i).x) + Math.abs(h.y - pz.get(i).y));
                 }
 
                 sum += min;
             }
-
             answer = Math.min(answer, sum);
         } else {
             for (int i = s; i < len; i++) {

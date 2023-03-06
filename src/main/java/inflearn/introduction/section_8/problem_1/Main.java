@@ -15,9 +15,7 @@ public class Main {
         if (sum > total - sum) return;
 
         if (level == length) {
-            if (sum == total - sum) {
-                answer = "YES";
-            }
+            if (sum == total - sum) answer = "YES";
         } else {
             DFS(level + 1, sum, arr);
             DFS(level + 1, sum + arr[level], arr);

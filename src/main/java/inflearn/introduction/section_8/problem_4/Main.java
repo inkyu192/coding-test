@@ -2,6 +2,9 @@ package inflearn.introduction.section_8.problem_4;
 
 import java.util.Scanner;
 
+/**
+ * 4. 중복순열 구하기
+ */
 public class Main {
 
     static int[] pm;
@@ -9,7 +12,7 @@ public class Main {
 
     public void DFS(int level) {
         if (level == m) {
-            for (int x : pm) System.out.print(x + " ");
+            for (int i : pm) System.out.print(i + " ");
             System.out.println();
         } else {
             for (int i = 1; i <= n; i++) {

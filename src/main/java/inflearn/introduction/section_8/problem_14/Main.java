@@ -5,7 +5,7 @@ import java.util.Queue;
 import java.util.Scanner;
 
 /**
- * 14. 섬나라 아일랜드(DFS)
+ * 14. 섬나라 아일랜드(BFS)
  */
 class Point {
     int x, y;

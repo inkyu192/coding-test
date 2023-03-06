@@ -1,5 +1,6 @@
 package inflearn.introduction.section_8.problem_9;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 /**

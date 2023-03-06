@@ -36,9 +36,9 @@ public class Main {
                 int ny = poll.y + dy[i];
 
                 if (nx >= 1 && nx <= 7 && ny >= 1 && ny <= 7 && board[nx][ny] == 0) {
+                    queue.offer(new Point(nx, ny));
                     board[nx][ny] = 1;
                     dis[nx][ny] = dis[poll.x][poll.y] + 1;
-                    queue.offer(new Point(nx, ny));
                 }
             }
         }
