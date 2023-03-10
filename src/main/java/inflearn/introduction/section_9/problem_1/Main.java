@@ -13,7 +13,6 @@ class Body implements Comparable<Body> {
     Body(int height, int weight) {
         this.height = height;
         this.weight = weight;
-
     }
 
     @Override
