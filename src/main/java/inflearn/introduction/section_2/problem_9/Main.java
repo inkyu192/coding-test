@@ -22,7 +22,7 @@ public class Main {
             }
 
             sum1 += arr[i][i];
-            sum2 += arr[n - i - 1][n - i - 1];
+            sum2 += arr[n - i - 1][i];
 
             answer = Math.max(answer, sum3);
             answer = Math.max(answer, sum4);
