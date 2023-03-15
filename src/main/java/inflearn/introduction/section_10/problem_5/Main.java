@@ -12,7 +12,16 @@ public class Main {
     static int[] dy;
 
     public int solution(int[] coin) {
-        return 0;
+        Arrays.fill(dy, Integer.MAX_VALUE);
+
+        dy[0] = 0;
+
+        for (int i = 0; i < n; i++) {
+            for (int j = coin[i]; j <= m; j++) {
+                dy[j] = Math.min(dy[j], dy[j - coin[i]] + 1);
+            }
+        }
+        return dy[m];
     }
 
     public static void main(String[] args) {
