@@ -2,6 +2,7 @@ package programmers.level_0.introduction;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class GetDivisor {
@@ -16,14 +17,8 @@ public class GetDivisor {
             }
         }
 
-        int[] answer = new int[list.size()];
+        Collections.sort(list);
 
-        for (int i = 0; i < list.size(); i++) {
-            answer[i] = list.get(i);
-        }
-
-        Arrays.sort(answer);
-
-        return answer;
+        return list.stream().mapToInt(Integer::intValue).toArray();
     }
 }
