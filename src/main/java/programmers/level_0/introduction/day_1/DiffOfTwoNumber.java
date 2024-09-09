@@ -1,4 +1,4 @@
-package programmers.level_0.introduction;
+package programmers.level_0.introduction.day_1;
 
 public class DiffOfTwoNumber {
 
