@@ -5,17 +5,17 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.*;
 
-@DisplayName("두 수의 차")
-class DiffOfTwoNumberTest {
+@DisplayName("두 수의 합")
+class SumTwoNumberTest {
 
-    DiffOfTwoNumber test = new DiffOfTwoNumber();
+    SumTwoNumber test = new SumTwoNumber();
 
     @Test
     void case1() {
         int num1 = 2;
         int num2 = 3;
 
-        int result = -1;
+        int result = 5;
 
         assertThat(test.solution(num1, num2)).isEqualTo(result);
     }
@@ -25,7 +25,7 @@ class DiffOfTwoNumberTest {
         int num1 = 100;
         int num2 = 2;
 
-        int result = 98;
+        int result = 102;
 
         assertThat(test.solution(num1, num2)).isEqualTo(result);
     }

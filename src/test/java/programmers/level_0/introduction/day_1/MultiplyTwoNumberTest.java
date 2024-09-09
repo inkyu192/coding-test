@@ -6,9 +6,9 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.*;
 
 @DisplayName("두 수의 곱")
-class MultiplyOfTwoNumberTest {
+class MultiplyTwoNumberTest {
 
-    MultiplyOfTwoNumber test = new MultiplyOfTwoNumber();
+    MultiplyTwoNumber test = new MultiplyTwoNumber();
 
     @Test
     void case1() {
