@@ -1,4 +1,4 @@
-package programmers.level_0.introduction;
+package programmers.level_0.introduction.day_2;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
