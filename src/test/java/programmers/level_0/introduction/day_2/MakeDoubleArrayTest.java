@@ -1,11 +1,11 @@
-package programmers.level_0.introduction;
+package programmers.level_0.introduction.day_2;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.*;
 
-@DisplayName("배열 두배 만들기")
+@DisplayName("배열 두 배 만들기")
 class MakeDoubleArrayTest {
 
     MakeDoubleArray test = new MakeDoubleArray();
