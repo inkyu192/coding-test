@@ -1,6 +1,6 @@
 package programmers.level_1.practice;
 
-public class SumDivisors {
+public class SumOfDivisors {
 
     public int solution(int n) {
         int result = 0;
