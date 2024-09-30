@@ -6,13 +6,13 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 @DisplayName("약수의 합")
-class SumDivisorsTest {
+class SumOfDivisorsTest {
 
-    SumDivisors sumDivisors;
+    SumOfDivisors sumOfDivisors;
 
     @BeforeEach
     void beforeEach() {
-        sumDivisors = new SumDivisors();
+        sumOfDivisors = new SumOfDivisors();
     }
 
     @Test
@@ -20,7 +20,7 @@ class SumDivisorsTest {
         int n = 12;
         int expected = 28;
 
-        Assertions.assertThat(sumDivisors.solution(n)).isEqualTo(expected);
+        Assertions.assertThat(sumOfDivisors.solution(n)).isEqualTo(expected);
     }
 
     @Test
@@ -28,6 +28,6 @@ class SumDivisorsTest {
         int n = 5;
         int expected = 6;
 
-        Assertions.assertThat(sumDivisors.solution(n)).isEqualTo(expected);
+        Assertions.assertThat(sumOfDivisors.solution(n)).isEqualTo(expected);
     }
 }
