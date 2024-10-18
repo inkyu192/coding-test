@@ -1,11 +1,11 @@
-package inflearn.introduction.section_1.problem_3;
+package inflearn.introduction.section_1;
 
 import java.util.Scanner;
 
 /**
  * 3. 문장 속 단어
  */
-public class Main {
+public class WordInSentence {
 
     public String solution(String str) {
         String answer = "";
@@ -22,7 +22,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        Main T = new Main();
+        WordInSentence T = new WordInSentence();
         Scanner kb = new Scanner(System.in);
         String str = kb.nextLine();
         System.out.print(T.solution(str));
