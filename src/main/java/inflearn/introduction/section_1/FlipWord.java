@@ -1,4 +1,4 @@
-package inflearn.introduction.section_1.problem_4;
+package inflearn.introduction.section_1;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -6,7 +6,7 @@ import java.util.Scanner;
 /**
  * 4. 단어 뒤집기
  */
-public class Main {
+public class FlipWord {
 
     public ArrayList<String> solution(int n, String[] str) {
         ArrayList<String> answer = new ArrayList<>();
@@ -19,7 +19,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        Main T = new Main();
+        FlipWord T = new FlipWord();
         Scanner kb = new Scanner(System.in);
         int n = kb.nextInt();
         String[] str = new String[n];
